@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!--Upper 3rd of Website-->    
+
+<div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.png" style="height: 100px;width:200px">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Software Developer</p>
+                <h1>Hi, I'm <span>Subhanjan Dutta</span> <br>From Kolkata, India</h1>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--About Me Section-->
+
+    <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/User.png"style="height:550px;width:400px">    
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm a driven software engineer that is ready to start as a freshman in the SE industry. I have a background in Java programming and web development, with knowledge in utilizing  Python, C#, and DML (using MySQL). I have a track record of meeting deadlines and delivering high-quality work on time.
+                            <br>My work ethic and inventiveness are the cornerstones of my professional philosophy. I really flourish in fast-paced settings that value innovation and problem-solving. My capacity to adjust and innovate on any task given to me has continuously allowed me to add to the accomplishment of any project in which I have been involved.
+                            <br>In addition to my career pursuits, I have a strong desire to always learn and develop, which fuels my motivation and inspiration.<br> I'm looking forward to provide my knowledge, enthusiasm and dedication to challenges in the near and far future.</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Web Development</span><br>Using HTML,CSS and JavaScript</li>
+                                    <li><span>Object Oriented Programming</span><br>Primarily Using Java and Python Language</li>
+                                    <li><span>.NET Framework/.NET Core</span><br>Using C# Language</li>
+                                    <li><span>DDL/DML/DCL</span><br>Using MySQL Language</li>
+                                    <li><span>Procedural Programming</span><br>Using C Language</li>
+                                    <li><span>Cloud Computing</span><br>Knows about Cloud Architecture and Cloud Models in AWS</li>
+                                </ul>
+                            </div>
+
+                            
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2024</span><br>Implemented Movie Booking Ticket System after doing <br>Industrial Training on Full Stack Development with Microsoft .NET and SQL Server Cloud Based under the tutelage of <br>Ardent Computech PVT. LTD.</li>
+                                </ul>
+                            </div>
+
+                            
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2021-2025</span><br>B.Tech in Computer Science Engineering from Future Institute of Technology</li>
+                                    <li><span>2021</span><br>Class 12th Passout from Delhi Public School, Ruby Park, under CBSE Board</li>
+                                    <li><span>2019</span><br>Class 10th Passout from Ram Mohan Mission High School, under ICSE Board</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+    </div>
+
+    <!--PortFolio Section-->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/WeatherWork.png" height="550px">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>This app gives you a compact and comprehensive weather report of a city</p>
+                        <a href="https://github.com/Subbu5602/Simple-Weather-Application" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/ImageSearch.png"  height="550px">
+                    <div class="layer">
+                        <h3>Image Search Engine</h3>
+                        <p>This app shows you related images of any given terms</p>
+                        <a href="https://github.com/Subbu5602/Image_Search_Engine" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/PasswordGenerator.png" height="550px">
+                    <div class="layer">
+                        <h3>Password Generator</h3>
+                        <p>This app can generate a random password and lets the user know of the relative strength of the password</p>
+                        <a href="https://github.com/Subbu5602/Password-Generator" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+<!--Contact Me Section-->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> subhanjandutta203@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-8585864411</p> 
+                    <div class="social-items">
+                        <a href="https://www.linkedin.com/in/subhanjan-dutta-a3a5a7306/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Subbu5602" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                    <a href="" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="script.js"></script>
+
+
+</html>
