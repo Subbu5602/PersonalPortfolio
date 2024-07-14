@@ -29,7 +29,7 @@ document.querySelector('.btn').addEventListener('click', function (e) {
             <div class="layer">
                 <h3>Quiz Game</h3>
                 <p>A Simple Quiz Game on Computer Science Topics with Scoring</p>
-                <a href="https://github.com/Subbu5602/Simple_Quiz_Game" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="https://subbu5602.github.io/Simple_Quiz_Game/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
         </div>
        
@@ -38,7 +38,7 @@ document.querySelector('.btn').addEventListener('click', function (e) {
             <div class="layer">
                 <h3>Rock-Paper-Scissors Game</h3>
                 <p>A Simple Rock-Paper-Scissors Game played with the computer with Score Recording</p>
-                <a href="https://github.com/Subbu5602/Rock_Paper_Scissors_Game" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="https://subbu5602.github.io/Rock_Paper_Scissors_Game/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
         </div>
         
@@ -47,7 +47,7 @@ document.querySelector('.btn').addEventListener('click', function (e) {
             <div class="layer">
                 <h3>Simple To-Do-List</h3>
                 <p>A Simplistic To-Do-List</p>
-                <a href="https://github.com/Subbu5602/To-Do-List" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="https://subbu5602.github.io/To-Do-List/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
         </div>
 
@@ -56,7 +56,7 @@ document.querySelector('.btn').addEventListener('click', function (e) {
         <div class="layer">
             <h3>Simple Calculator</h3>
             <p>A Simple Calculator</p>
-            <a href="https://github.com/Subbu5602/Calculator_Program" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://subbu5602.github.io/Calculator_Program/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
     </div>
         `;
