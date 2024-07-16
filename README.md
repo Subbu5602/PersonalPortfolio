@@ -8,8 +8,10 @@
 ![Screenshot 2024-07-13 195619](https://github.com/user-attachments/assets/3e8cbf2f-d428-4231-9238-2d088ab2704e)
 
 ## Projects Section
-### Each of the Project links point to the public github repository where the project is located
-![Screenshot 2024-07-13 195709](https://github.com/user-attachments/assets/5254e036-77ef-4629-ab2a-5aabcfa9148f)
+### Each of the Project links point to the Deployed Website or the public github repository
+### Projects are rotated in and out when the "See More" button is pressed
+![image](https://github.com/user-attachments/assets/f6fe886d-5107-4949-a1e2-61e140ffe326)
+
 
 ## Contact Me Section containing links to Social Networks 
 ![Screenshot 2024-07-13 195732](https://github.com/user-attachments/assets/83f0dd80-f31d-4ca4-bf64-fd0d52e3f682)
