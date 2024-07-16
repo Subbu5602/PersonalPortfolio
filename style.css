@@ -233,7 +233,8 @@ nav ul li a:hover::after {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: white;
+    color: black;
+    font-weight: bolder;
     transition: background 0.5s;
 }
 

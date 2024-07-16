@@ -15,58 +15,94 @@ function opentab(tabname) {
 }
 
 
-let projectsAdded = false;
+        //Subsequent New Projects to be added in this Array
+        const projects = [
+            {
+                img: "Images/WeatherWork.png",
+                title: "Weather App",
+                description: "This app gives you a compact and comprehensive weather report of a city",
+                link: "https://subbu5602.github.io/Simple-Weather-Application/"
+            },
+            {
+                img: "Images/ImageSearch.png",
+                title: "Image Search Engine",
+                description: "This app shows you related images of any given terms",
+                link: "https://subbu5602.github.io/Image_Search_Engine/"
+            },
+            {
+                img: "Images/PasswordGenerator.png",
+                title: "Password Generator",
+                description: "This app can generate a random password and lets the user know of the relative strength of the password",
+                link: "https://subbu5602.github.io/Password-Generator/"
+            },
+            {
+                img: "Images/QuizWork.png",
+                title: "Quiz Game",
+                description: "A Simple Quiz Game on Computer Science Topics with Scoring",
+                link: "https://subbu5602.github.io/Simple_Quiz_Game/"
+            },
+            {
+                img: "Images/RockPaperScissors.png",
+                title: "Rock-Paper-Scissors Game",
+                description: "A Simple Rock-Paper-Scissors Game played with the computer with Score Recording",
+                link: "https://subbu5602.github.io/Rock_Paper_Scissors_Game/"
+            },
+            {
+                img: "Images/ToDoList.png",
+                title: "Simple To-Do-List",
+                description: "A Simplistic To-Do-List",
+                link: "https://subbu5602.github.io/To-Do-List/"
+            },
+            {
+                img: "Images/Calculator.png",
+                title: "Simple Calculator",
+                description: "A Simple Calculator",
+                link: "https://subbu5602.github.io/Calculator_Program/"
+            },
+            {
+                img: "Images/Notebook.png",
+                title: "Note Taking Application",
+                description: "A simple NotePad type Application",
+                link: "https://github.com/Subbu5602/NotePad_App"
+            }
+        ];
 
-document.querySelector('.btn').addEventListener('click', function (e) {
-    e.preventDefault();
+        let currentStartIndex = 0;
+        const projectsPerPage = 3;
 
-    if (!projectsAdded) {
-        const workList = document.querySelector('.work-list');
+        function displayProjects() {
+            const workList = document.querySelector('.work-list');
+            workList.innerHTML = '';
 
-        const moreWorks = `
-        <div class="work">
-            <img src="Images/QuizWork.png" height="550px">
-            <div class="layer">
-                <h3>Quiz Game</h3>
-                <p>A Simple Quiz Game on Computer Science Topics with Scoring</p>
-                <a href="https://subbu5602.github.io/Simple_Quiz_Game/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-        </div>
-       
-        <div class="work">
-            <img src="Images/RockPaperScissors.png" height="550px">
-            <div class="layer">
-                <h3>Rock-Paper-Scissors Game</h3>
-                <p>A Simple Rock-Paper-Scissors Game played with the computer with Score Recording</p>
-                <a href="https://subbu5602.github.io/Rock_Paper_Scissors_Game/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-        </div>
-        
-        <div class="work">
-            <img src="Images/ToDoList.png" height="550px">
-            <div class="layer">
-                <h3>Simple To-Do-List</h3>
-                <p>A Simplistic To-Do-List</p>
-                <a href="https://subbu5602.github.io/To-Do-List/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-        </div>
+            for (let i = 0; i < projectsPerPage; i++) {
+                const projectIndex = (currentStartIndex + i) % projects.length;
+                const project = projects[projectIndex];
+                const projectHTML = `
+                    <div class="work">
+                        <img src="${project.img}" height="550px">
+                        <div class="layer">
+                            <h3>${project.title}</h3>
+                            <p>${project.description}</p>
+                            <a href="${project.link}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                `;
+                workList.innerHTML += projectHTML;
+            }
 
-        <div class="work">
-        <img src="Images/Calculator.png" height="550px">
-        <div class="layer">
-            <h3>Simple Calculator</h3>
-            <p>A Simple Calculator</p>
-            <a href="https://subbu5602.github.io/Calculator_Program/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
-    </div>
-        `;
-        workList.innerHTML += moreWorks;
+            currentStartIndex = (currentStartIndex + projectsPerPage) % projects.length;
+        }
 
-        projectsAdded = true;
-        this.textContent = "That's all Folks !!";
-        this.disabled = true;
-    }
-});
+        document.querySelector('.btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            displayProjects();
+        });
+
+        // Initialize the first set of projects
+        displayProjects();
+
+
+
 
 var sidemenu = document.getElementById("sidemenu");
 
