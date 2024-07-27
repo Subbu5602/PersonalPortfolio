@@ -64,7 +64,32 @@ function opentab(tabname) {
                 title: "Note Taking Application",
                 description: "A simple NotePad type Application",
                 link: "https://github.com/Subbu5602/NotePad_App"
+            },
+            {
+                img: "Images/PokeDex.png",
+                title: "Online PokeDex",
+                description: "Online PokeDex where user is free to check basic details of any Pokemon",
+                link: "https://subbu5602.github.io/Online-PokeDex/"
+            },
+            {
+                img: "Images/TicTacToeImage.png",
+                title: "Tic-Tac-Toe Game",
+                description: "A simple TicTacToe Game using Java",
+                link: "https://github.com/Subbu5602/TicTacToeJava"
+            },
+            {
+                img: "Images/SnakeGame.png",
+                title: "Classic Snake Game",
+                description: "Popular Snake Game using Java",
+                link: "https://github.com/Subbu5602/SnakeGame"
+            },
+            {
+                img: "Images/PingPong.png",
+                title: "Ping Pong Game",
+                description: "Ping Pong Game using Java",
+                link: "https://github.com/Subbu5602/PingPong-Game"
             }
+
         ];
 
         let currentStartIndex = 0;
