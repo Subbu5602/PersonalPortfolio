@@ -94,6 +94,12 @@ function opentab(tabname) {
                 title: "Nike Shoes Landing Page",
                 description: "A Landing Page for a Nike shoe E-Commerce Store",
                 link: "https://nike-landing-page-five-olive.vercel.app/"
+            },
+            {
+                img: "Images/Earbuds.jpg",
+                title: "Earbuds E-Commerce Landing Page",
+                description: "A Landing Page for an E-Commerce store of Earbuds",
+                link: "https://subbu5602.github.io/SingleLandingPage/"
             }
 
         ];
