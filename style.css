@@ -42,14 +42,14 @@ body {
 }
 
 .container {
-    padding: 10px 5%;
+    padding: 10px 5%;  /*top,bottom - 10px, left-right - 5%*/
 }
 
 nav {
-    display: flex;
+    display: flex; /*to enable flexbox*/
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*next line for elements if not enough space*/
 }
 
 .logo {
@@ -74,7 +74,7 @@ nav ul li a::after {
     width: 0;
     height: 3px;
     background: rgb(36, 87, 239);
-    position: absolute;
+    position: absolute; /*parent is list*/
     left: 0;
     bottom: -6px;
     transition: 0.5s;
@@ -110,7 +110,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
-    flex-basis: 35%;
+    flex-basis: 35%; /*big picture initially takes 35% of parent's width, parent is row containing pic and skill tabs with details*/
 }
 
 .about-col-1 img {
@@ -118,7 +118,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 {
-    flex-basis: 60%;
+    flex-basis: 60%; /*details take 60% of row's width*/
 }
 
 .sub-title {
@@ -145,7 +145,7 @@ nav ul li a:hover::after {
     width: 0;
     height: 3px;
     background: rgb(36, 87, 239);
-    position: absolute;
+    position: absolute; /*parent -> "tab-titile"*/
     left: 0;
     bottom: -8px;
     transition: 0.5s;
@@ -170,7 +170,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents.active-tab {
-    display: block;
+    display: block; /*block level element takes full width of container*/
 }
 
 
@@ -180,8 +180,8 @@ nav ul li a:hover::after {
 }
 
 .work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid; /*enable grid*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*repeat() to repeat the style for elements, elemetns auto fit, minimum 250 px and max extending upto 1 fraction of available space*/
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -204,18 +204,18 @@ nav ul li a:hover::after {
     height: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgb(36, 87, 239));
     border-radius: 10px;
-    position: absolute;
+    position: absolute; /*parent -> work*/
     left: 0;
     bottom: 0;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
+    padding: 0 40px; /*top,bottom - 0px  left,right - 40px*/
     text-align: center;
     font-size: 14px;
-    transition: height 0.5s;
+    transition: height 0.7s; /*all changes to height happen within 0.7s*/
 }
 
 .layer h3 {
@@ -228,7 +228,7 @@ nav ul li a:hover::after {
     color: rgb(36, 87, 239);
     text-decoration: none;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 60px; /*spacing between lines*/
     background: white;
     width: 60px;
     height: 60px;
@@ -237,11 +237,11 @@ nav ul li a:hover::after {
 }
 
 .work:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /*increase size of image by 110%*/
 }
 
 .work:hover .layer {
-    height: 100%;
+    height: 100%; /*change to height of blue layeer from 00 to 100% when hovering*/
 }
 
 .btn {
@@ -274,7 +274,7 @@ nav ul li a:hover::after {
     margin-top: 30px;
 }
 
-.contact-left p i {
+.contact-left p i { /*email and phone number text*/
     color: rgb(36, 87, 239);
     margin-right: 15px;
     font-size: 25px;
@@ -295,7 +295,7 @@ nav ul li a:hover::after {
 
 .social-items a:hover {
     color: rgb(36, 87, 239);
-    transform: translateY(-5px);
+    transform: translateY(-5px); /*move up by 5px*/
 }
 
 .btn.btn2 {
@@ -329,13 +329,13 @@ form btn2 {
     cursor: pointer;
 }
 
-nav .fas {
+nav .fas { /*burger menu being hidden in desktop screens*/
     display: none;
 }
 
 /*Mobile Responsive*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) { /*for screens having width of at most 600px*/
 
     #header {
         background-image: url(Images/Background.png);
@@ -364,13 +364,13 @@ nav .fas {
 
     nav ul {
         background: rgb(36, 87, 239);
-        position: fixed;
+        position: fixed; /*always stays in one position, out of view when scrolled down*/
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 2;
+        z-index: 2; /*higher means closer tp user*/
         transition: right 0.5s;
     }
 
@@ -392,7 +392,7 @@ nav .fas {
 
     .about-col-1,
     .about-col-2 {
-        flex-basis: 100%;
+        flex-basis: 100%; /*both take full width in mobile*/
     }
 
     .about-col-1 {

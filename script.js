@@ -1,6 +1,7 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+var tablinks = document.getElementsByClassName("tab-links"); //skill set tabs
+var tabcontents = document.getElementsByClassName("tab-contents"); //skill tab contents
 
+// First, remove "active-link" class from all tablinks, same for tab Contents,then give a particular tab the class of "active-tab" once an event is triggered 
 function opentab(tabname) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
@@ -110,12 +111,15 @@ let currentStartIndex = 0;
 const projectsPerPage = 3;
 
 function displayProjects() {
-  const workList = document.querySelector(".work-list");
-  workList.innerHTML = "";
+  const workList = document.querySelector(".work-list"); //3 projects that are viewable
+  workList.innerHTML = ""; // clears existing projects first to make space
 
+  //loop iterates 3 for 3 projects
   for (let i = 0; i < projectsPerPage; i++) {
+     // Calculate the index of the project to display, ensuring it wraps around using modulo
     const projectIndex = (currentStartIndex + i) % projects.length;
     const project = projects[projectIndex];
+    //html structure for each project
     const projectHTML = `
                     <div class="work">
                         <img src="${project.img}" height="550px">
@@ -126,43 +130,53 @@ function displayProjects() {
                         </div>
                     </div>
                 `;
+    // add that project to worklist 
     workList.innerHTML += projectHTML;
   }
 
+   // Update the `currentStartIndex` to move forward by `projectsPerPage`, wrapping around if necessary
   currentStartIndex = (currentStartIndex + projectsPerPage) % projects.length;
 }
 
 document.querySelector(".btn").addEventListener("click", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // stops page relaoding, allowing js to handle the click event with function
   displayProjects();
 });
 
 // Initialize the first set of projects
 displayProjects();
 
+//for mobile
 var sidemenu = document.getElementById("sidemenu");
 
+//becomes visible at extreme right
 function openmenu() {
   sidemenu.style.right = "0";
 }
 
+//goes out of view
 function closemenu() {
   sidemenu.style.right = "-200px";
 }
 
+//url of google form as web app to handle submissions
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwHFjGQVLGl5WQJfiRJcCU-txH6eMk8ht3OIhtDCeDJyWwHrqcGJuZ3-k-51JICsaBtaw/exec";
+//refrencing the form in index.html
 const form = document.forms["submit-to-google-sheet"];
 const msg = document.getElementById("msg");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  //FormData sends info in reqd format
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       msg.innerHTML = "Message Received !";
+      //after getting response confirming success, wait 5s before resetting the green success msg user received
       setTimeout(function () {
         msg.innerHTML = "";
       }, 5000);
+      //clear every user input
       form.reset();
     })
     .catch((error) => console.error("Error!", error.message));
