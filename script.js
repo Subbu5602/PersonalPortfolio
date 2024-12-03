@@ -17,30 +17,7 @@ function opentab(tabname) {
 //Subsequent New Projects to be added on top of this Array
 
 const projects = [
-  {
-  img: "Images/GeminiDemoPic.png",
-  title: "Gemini Clone",
-  description: "A Gemini AI chatbot clone developed using React and the Gemini API, featuring interactive conversations, real-time responses, and an intuitive user interface, optimized for seamless user experience.",
-  link: "https://gemini-clone-ruby-ten.vercel.app/",
-  },
-  {
-  img: "Images/BrainwaveDemoPic.png",
-  title: "Responsive Landing Page using React and TailWind CSS",
-  description: "A responsive landing page built with React and Tailwind CSS, featuring a modern design and dynamic content, optimized for various screen sizes and devices.",
-  link: "https://first-react-landing-page-lac.vercel.app/",
-  },
-  {
-    img: "Images/Earbuds.jpg",
-    title: "Earbuds E-Commerce Landing Page",
-    description: "A Landing Page for an E-Commerce store of Earbuds",
-    link: "https://subbu5602.github.io/SingleLandingPage/",
-  },
-  {
-    img: "Images/Nike.png",
-    title: "Nike Shoes Landing Page",
-    description: "A Landing Page for a Nike shoe E-Commerce Store",
-    link: "https://nike-landing-page-five-olive.vercel.app/",
-  },
+  
   {
     img: "Images/PingPong.png",
     title: "Ping Pong Game",
