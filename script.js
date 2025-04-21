@@ -1,7 +1,7 @@
 var tablinks = document.getElementsByClassName("tab-links"); //skill set tabs
 var tabcontents = document.getElementsByClassName("tab-contents"); //skill tab contents
 
-// First, remove "active-link" class from all tablinks, same for tab Contents,then give a particular tab the class of "active-tab" once an event is triggered 
+// First, remove "active-link" class from all tablinks, same for tab Contents,then give a particular tab the class of "active-tab" once an event is triggered
 function opentab(tabname) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
@@ -17,7 +17,41 @@ function opentab(tabname) {
 //Subsequent New Projects to be added on top of this Array
 
 const projects = [
-  
+  {
+    img: "Images/GeminiDemoPic.png",
+    title: "Gemini Clone",
+    description:
+      "A Gemini AI chatbot clone developed using React and the Gemini API, featuring interactive conversations, real-time responses, and an intuitive user interface, optimized for seamless user experience.",
+    link: "https://gemini-clone-ruby-ten.vercel.app/",
+  },
+  {
+    img: "Images/BrainwaveDemoPic.png",
+    title: "Responsive Landing Page using React and TailWind CSS",
+    description:
+      "A responsive landing page built with React and Tailwind CSS, featuring a modern design and dynamic content, optimized for various screen sizes and devices.",
+    link: "https://first-react-landing-page-lac.vercel.app/",
+  },
+  {
+    img: "Images/Earbuds.jpg",
+    title: "Earbuds E-Commerce Landing Page",
+    description: "A Landing Page for an E-Commerce store of Earbuds",
+    link: "https://subbu5602.github.io/SingleLandingPage/",
+  },
+
+  {
+    img: "Images/PokeDex.png",
+    title: "Online PokeDex",
+    description:
+      "Online PokeDex where user is free to check basic details of any Pokemon",
+    link: "https://subbu5602.github.io/Online-PokeDex/",
+  },
+  {
+    img: "Images/Nike.png",
+    title: "Nike Shoes Landing Page",
+    description: "A Landing Page for a Nike shoe E-Commerce Store",
+    link: "https://nike-landing-page-five-olive.vercel.app/",
+  },
+
   {
     img: "Images/PingPong.png",
     title: "Ping Pong Game",
@@ -35,13 +69,6 @@ const projects = [
     title: "Tic-Tac-Toe Game",
     description: "A simple TicTacToe Game using Java",
     link: "https://github.com/Subbu5602/TicTacToeJava",
-  },
-  {
-    img: "Images/PokeDex.png",
-    title: "Online PokeDex",
-    description:
-      "Online PokeDex where user is free to check basic details of any Pokemon",
-    link: "https://subbu5602.github.io/Online-PokeDex/",
   },
   {
     img: "Images/Notebook.png",
@@ -105,7 +132,7 @@ function displayProjects() {
 
   //loop iterates 3 for 3 projects
   for (let i = 0; i < projectsPerPage; i++) {
-     // Calculate the index of the project to display, ensuring it wraps around using modulo
+    // Calculate the index of the project to display, ensuring it wraps around using modulo
     const projectIndex = (currentStartIndex + i) % projects.length;
     const project = projects[projectIndex];
     //html structure for each project
@@ -119,11 +146,11 @@ function displayProjects() {
                         </div>
                     </div>
                 `;
-    // add that project to worklist 
+    // add that project to worklist
     workList.innerHTML += projectHTML;
   }
 
-   // Update the `currentStartIndex` to move forward by `projectsPerPage`, wrapping around if necessary
+  // Update the `currentStartIndex` to move forward by `projectsPerPage`, wrapping around if necessary
   currentStartIndex = (currentStartIndex + projectsPerPage) % projects.length;
 }
 
