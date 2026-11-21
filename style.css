@@ -298,6 +298,15 @@ nav ul li a:hover::after {
     transform: translateY(-5px); /*move up by 5px*/
 }
 
+.social-items a.icon-text-link {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  position: relative;
+  top: -6.5px;
+}
+
 .btn.btn2 {
     display: inline-block;
     background: rgb(36, 87, 239);

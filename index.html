@@ -1,253 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <!--Upper 3rd of Website-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
 
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img
-            src="Images/PortfolioNameBolded.png"
-            style="height: 100px; width: 200px; opacity: 0.53"
-          />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
-            <!--for phones, using font-awesome-->
-          </ul>
-          <!-- when list not present, white bars appear that can be clicked to open -->
-          <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p>Aspiring Software Developer</p>
-          <h1>
-            Hi, I'm <span>Subhanjan Dutta</span> <br />From Kolkata, India
-          </h1>
-        </div>
-        <div class="profile-image">
-          <img src="Images/PrimaryImage.png" alt="Profile Image" />
-        </div>
+<body>
+  <!--Upper 3rd of Website-->
+
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="Images/PortfolioNameBolded.png" style="height: 100px; width: 200px; opacity: 0.53" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+          <!--for phones, using font-awesome-->
+        </ul>
+        <!-- when list not present, white bars appear that can be clicked to open -->
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Aspiring Software Developer</p>
+        <h1>
+          Hi, I'm <span>Subhanjan Dutta</span> <br />From Kolkata, India
+        </h1>
+      </div>
+      <div class="profile-image">
+        <img src="Images/PrimaryImage.png" alt="Profile Image" />
       </div>
     </div>
+  </div>
 
-    <!--About Me Section-->
+  <!--About Me Section-->
 
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <!-- big image -->
-          <div class="about-col-1">
-            <img
-              src="Images/UserImage.png"
-              style="height: 550px; width: 400px"
-            />
-          </div>
-          <!-- Paragraph and skill tabs -->
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>
-              I'm a driven software engineer that is ready to start as a
-              freshman in the SE industry. I have a background in Java
-              programming and web development, with minor knowledge in utilizing
-              Python, C#, and DML (using MySQL). I have a track record of
-              meeting deadlines and delivering high-quality work on time.
-              <br />My work ethic and inventiveness are the cornerstones of my
-              professional philosophy. I really flourish in fast-paced settings
-              that value innovation and problem-solving. My capacity to adjust
-              and innovate on any task given to me has continuously allowed me
-              to add to the accomplishment of any project in which I have been
-              involved. <br />In addition to my career pursuits, I have a strong
-              desire to always learn and develop, which fuels my motivation and
-              inspiration.<br />
-              I'm looking forward to provide my knowledge, enthusiasm and
-              dedication to challenges in the near and far future.
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <!-- big image -->
+        <div class="about-col-1">
+          <img src="Images/UserImage.png" style="height: 550px; width: 400px" />
+        </div>
+        <!-- Paragraph and skill tabs -->
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I'm a Software Quality Engineer currently transitioning into Data Analysis. My day job is full-lifecycle QA
+            — manual testing, test automation with Selenium and Playwright, and non-functional testing with JMeter — for
+            a Fortune 500 financial services client.<br /><br />
+            Alongside that, I'm building hands-on data skills: SQL, Python/Pandas, and Tableau, applied through
+            self-driven projects spanning exploratory data analysis, a SQL + Python data pipeline, and currently working
+            on a machine learning model for predicting hotel booking cancellations.<br /><br />
+            I like problems that involve digging into messy data and explaining what it actually means — which is a big
+            part of why I'm making this shift. I'm looking for a role where I can bring that analytical curiosity
+            together with the testing/data-quality discipline I've already built.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
             </p>
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-            </div>
+            <p class="tab-links" onclick="opentab('experience')">
+              Experience
+            </p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
 
-            <!-- SKills tab -->
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Web Development</span><br />Proficient in HTML, CSS,
-                  JavaScript, currently upskilling in frameworks like Bootstrap, Tailwind CSS and ReactJS for
-                  responsive design.
-                </li>
-                <li>
-                  <span>Object Oriented Programming</span><br />Primarily Using
-                  Java
-                </li>
-                
-                <li>
-                  <span>DDL/DML/DCL</span><br />Using MySQL Language
-                </li>
-                <li>
-                  <span>.NET Framework/.NET Core</span><br />Using C# Language
-                </li>
-                <li>
-                  <span>Procedural Programming</span><br />Using C Language
-                </li>
-              </ul>
-            </div>
+          <!-- SKills tab -->
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Data Analysis & BI</span><br />SQL (joins, CTEs, window functions), Python (Pandas, data cleaning
+                & transformation),
+                Tableau Desktop/Prep (dashboards, LOD expressions), Excel
+              </li>
+              <li>
+                <span>Databases</span><br />MySQL, SQLite, PostgreSQL
+              </li>
 
-            <!-- Experience Tab -->
-            <div class="tab-contents" id="experience">
-              <ul>
-                
-              </ul>
-            </div>
+              <li>
+                <span>QA & Test Automation</span><br />Manual testing, test case/scenario design,
+                Selenium with Java (GTAF and Playwright frameworks), Apache JMeter, Cucumber (BDD), Postman
+              </li>
+              <li>
+                <span>Web Development (earlier background)</span><br />HTML, CSS, JavaScript
+              </li>
+            </ul>
+          </div>
 
-            <!-- Education Tab -->
-            <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span>2021-2025</span><br />B.Tech in Computer Science
-                  Engineering from Future Institute of Technology
-                </li>
-                <li>
-                  <span>2021</span><br />Class 12th Passout from Delhi Public
-                  School, Ruby Park, under CBSE Board
-                </li>
-                <li>
-                  <span>2019</span><br />Class 10th Passout from Ram Mohan
-                  Mission High School, under ICSE Board
-                </li>
-              </ul>
-            </div>
+          <!-- Experience Tab -->
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>Quality Engineer & Data Analyst — Cognizant Technology Solutions (Client: Manulife Financial
+                  Corporation) · Sep 2025 – Present</span><br />
+                Conducting full-lifecycle testing — manual, non-functional (JMeter), and automated (Selenium,
+                Playwright) — with structured test case and scenario design.<br /> Reviewing and validating datasets in
+                Excel,
+                tracking defect and data-quality patterns, and partnering with onshore/offshore teams during sprint
+                ceremonies and defect triage.
+              </li>
+              <li>
+                <span>Intern — Cognizant Technology Solutions · May 2025 – Sep 2025</span><br />Technical training in
+                Java, DSA, MySQL, Selenium, Cucumber, and DevOps fundamentals.
+                <br />Built BDD test frameworks using Selenium WebDriver, Java, and Cucumber.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Education Tab -->
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>2021-2025</span><br />B.Tech in Computer Science
+                Engineering from Future Institute of Technology
+              </li>
+              <li>
+                <span>2021</span><br />Class 12th Passout from Delhi Public
+                School, Ruby Park, under CBSE Board
+              </li>
+              <li>
+                <span>2019</span><br />Class 10th Passout from Ram Mohan
+                Mission High School, under ICSE Board
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!--PortFolio Section-->
+  <!--PortFolio Section-->
 
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <!--any new project -> new instance of div.work
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <!--any new project -> new instance of div.work
                 The new Project goes on top, the rest get pushed down-->
-                <div class="work">
-                  <img src="Images/PingPong.png" height="550px" />
-                  <div class="layer">
-                    <h3>Ping Pong Game</h3>
-                    <p>Ping Pong Game using Java</p>
-                    <a
-                      href="https://github.com/Subbu5602/PingPong-Game"
-                      target="_blank"
-                      >
-                      <!-- Font awesome arrow pic to redirect -->
-                      <i class="fa-solid fa-up-right-from-square"></i> 
-                    </a>
-                  </div>
-                </div>
-
-                <div class="work">
-                  <img src="Images/SnakeGame.png" height="550px" />
-                  <div class="layer">
-                    <h3>Classic Snake Game</h3>
-                    <p>Popular Snake Game using Java</p>
-                    <a
-                      href="https://github.com/Subbu5602/SnakeGame"
-                      target="_blank"
-                      >
-                      <i class="fa-solid fa-up-right-from-square"></i> 
-                    </a>
-                  </div>
-                </div>
-          
-                <div class="work">
-            <img src="Images/TicTacToeImage.png" height="550px" />
-            <div class="layer">
-              <h3>Tic-Tac-Toe Game</h3>
-              <p>A simple TicTacToe Game using Java</p>
-              <a
-                href="https://github.com/Subbu5602/TicTacToeJava"
-                target="_blank"
-                >
-                
-                <i class="fa-solid fa-up-right-from-square"></i> 
-              </a>
-            </div>
+        <div class="work">
+          <img src="Images/PingPong.png" height="550px" />
+          <div class="layer">
+            <h3>Ping Pong Game</h3>
+            <p>Ping Pong Game using Java</p>
+            <a href="https://github.com/Subbu5602/PingPong-Game" target="_blank">
+              <!-- Font awesome arrow pic to redirect -->
+              <i class="fa-solid fa-up-right-from-square"></i>
+            </a>
           </div>
         </div>
-        <button class="btn">See more</button>
-      </div>
-    </div>
 
-    <!--Contact Me Section-->
-
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p>
-              <i class="fa-solid fa-envelope"></i> subhanjandutta203@gmail.com
-            </p>
-            <p><i class="fa-solid fa-phone"></i> +91-8585864411</p>
-            <div class="social-items">
-              <a
-                href="https://www.linkedin.com/in/subhanjan-dutta-a3a5a7306/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="https://github.com/Subbu5602" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </div>
-            <!-- Keeping CV Button hidden , to be implemented later -->
-            <a href="" download class="btn btn2" style="display: none"
-              >Download CV</a
-            >
-            <a href="Images/Resume.pdf" download class="btn btn2"
-              >Download Resume</a
-            >
+        <div class="work">
+          <img src="Images/SnakeGame.png" height="550px" />
+          <div class="layer">
+            <h3>Classic Snake Game</h3>
+            <p>Popular Snake Game using Java</p>
+            <a href="https://github.com/Subbu5602/SnakeGame" target="_blank">
+              <i class="fa-solid fa-up-right-from-square"></i>
+            </a>
           </div>
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <!-- Showing this span when user successfully sends message -->
-            <span id="msg"></span>
+        </div>
+
+        <div class="work">
+          <img src="Images/TicTacToeImage.png" height="550px" />
+          <div class="layer">
+            <h3>Tic-Tac-Toe Game</h3>
+            <p>A simple TicTacToe Game using Java</p>
+            <a href="https://github.com/Subbu5602/TicTacToeJava" target="_blank">
+
+              <i class="fa-solid fa-up-right-from-square"></i>
+            </a>
           </div>
         </div>
       </div>
+      <button class="btn">See more</button>
     </div>
-  </body>
+  </div>
 
-  <script src="script.js"></script>
+  <!--Contact Me Section-->
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p>
+            <i class="fa-solid fa-envelope"></i> subhanjandutta203@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +91-8585864411</p>
+          <div class="social-items">
+            <a href="https://www.linkedin.com/in/subhanjan-dutta-a3a5a7306/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Subbu5602" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://public.tableau.com/app/profile/subhanjan.dutta/vizzes" target="_blank"
+              class="icon-text-link">Tableau</a>
+          </div>
+          <!-- Keeping CV Button hidden , to be implemented later -->
+          <a href="" download class="btn btn2" style="display: none">Download CV</a>
+          <a href="Images/Resume.docx" download class="btn btn2">Download Resume</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <!-- Showing this span when user successfully sends message -->
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+
 </html>

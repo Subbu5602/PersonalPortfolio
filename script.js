@@ -18,6 +18,24 @@ function opentab(tabname) {
 
 const projects = [
   {
+    img:"Images/SteamGamesSQLPipeline.png",
+    title:"SQL + Python Data Pipeline",
+    description:"A data pipeline project built on Kaggle's Steam game recommendations dataset, featuring a relational schema with JOINs, CTEs, subqueries, and window functions, with results pulled into Python for further analysis.",
+    link:"https://github.com/Subbu5602/Steam-Recommendations-SQL-Pipeline"  
+  },
+  { 
+    img: "Images/HotelCancellationML.png",
+    title:"Hotel Booking Cancellation Prediction",
+    description:"A machine learning project predicting hotel booking cancellations using RandomForest and XGBoost, with engineered features and hyperparameters tuned via GridSearchCV and RandomizedSearchCV.",
+    link:"https://github.com/Subbu5602/Hotel-Booking-Cancellation-Prediction"
+  },
+  {
+    img: "Images/MovieEmotions.png",
+    title: "Movie Emotion Analysis",
+    description:"An exploratory data analysis project examining emotional patterns across films using a Kaggle movie-emotions dataset, with correlation heatmaps, grouped bar charts, and boxplots built using Pandas, Matplotlib, and Seaborn.",
+    link:"https://github.com/Subbu5602/Movie-Emotion-Analysis"
+  },
+  {
     img: "Images/GeminiDemoPic.png",
     title: "Gemini Clone",
     description:
